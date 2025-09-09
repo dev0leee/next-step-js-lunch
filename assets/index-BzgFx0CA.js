@@ -4,4 +4,4 @@
  \\ \\  \\    \\ \\  \\\\\\  \\ \\  \\\\ \\  \\ \\  \\    \\ \\   __  \\  
   \\ \\  \\____\\ \\  \\\\\\  \\ \\  \\\\ \\  \\ \\  \\____\\ \\  \\ \\  \\ 
    \\ \\_______\\ \\_______\\ \\__\\\\ \\__\\ \\_______\\ \\__\\ \\__\\
-    \\|_______|\\|_______|\\|__| \\|__|\\|_______|\\|__|\\|__|`,"color: #d81b60; font-size: 14px; font-weight: bold;");addEventListener("load",()=>{const o=document.querySelector("#app"),t=document.createElement("img");t.src="/assets/favorite-icon-filled.png",o&&o.appendChild(t)});
+    \\|_______|\\|_______|\\|__| \\|__|\\|_______|\\|__|\\|__|`,"color: #d81b60; font-size: 14px; font-weight: bold;");addEventListener("load",()=>{const o=document.querySelector("#app"),t=document.createElement("img");o&&o.appendChild(t)});
