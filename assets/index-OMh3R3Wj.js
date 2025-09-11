@@ -1,7 +1,0 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const _ of document.querySelectorAll('link[rel="modulepreload"]'))n(_);new MutationObserver(_=>{for(const e of _)if(e.type==="childList")for(const r of e.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&n(r)}).observe(document,{childList:!0,subtree:!0});function i(_){const e={};return _.integrity&&(e.integrity=_.integrity),_.referrerPolicy&&(e.referrerPolicy=_.referrerPolicy),_.crossOrigin==="use-credentials"?e.credentials="include":_.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function n(_){if(_.ep)return;_.ep=!0;const e=i(_);fetch(_.href,e)}})();console.log("npm run dev 명령어를 통해 점심 뭐 먹지 미션을 시작하세요");console.log(`%c ___       ___  ___  ________   ________  ___  ___     
-|\\  \\     |\\  \\|\\  \\|\\   ___  \\|\\   ____\\|\\  \\|\\  \\    
-\\ \\  \\    \\ \\  \\\\\\  \\ \\  \\\\ \\  \\ \\  \\___|\\ \\  \\\\\\  \\   
- \\ \\  \\    \\ \\  \\\\\\  \\ \\  \\\\ \\  \\ \\  \\    \\ \\   __  \\  
-  \\ \\  \\____\\ \\  \\\\\\  \\ \\  \\\\ \\  \\ \\  \\____\\ \\  \\ \\  \\ 
-   \\ \\_______\\ \\_______\\ \\__\\\\ \\__\\ \\_______\\ \\__\\ \\__\\
-    \\|_______|\\|_______|\\|__| \\|__|\\|_______|\\|__|\\|__|`,"color: #d81b60; font-size: 14px; font-weight: bold;");addEventListener("load",()=>{const o=document.querySelector("#app"),t=document.createElement("img");t.src="/assets/favorite-icon-filled.png",o&&o.appendChild(t)});
