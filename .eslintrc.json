@@ -1,11 +1,68 @@
 {
-  "rules": {},
   "env": {
     "es6": true,
-    "node": true
+    "node": true,
+    "browser": true
   },
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"]
+  "ignorePatterns": ["**/*", "!src/**/*"],
+  "extends": ["airbnb-base", "plugin:import/recommended"],
+  "plugins": ["import"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./src"],
+          ["@views", "./src/views"],
+          ["@components", "./src/components"]
+        ],
+        "extensions": [".js"]
+      }
+    }
+  },
+  "rules": {
+    // import : 빈 블럭으로 가져오기 금지
+    "import/no-empty-named-blocks": "error",
+    // export : var, let 금지
+    "import/no-mutable-exports": "error",
+    // import : 가져온 모듈을 선택자로 사용 금지
+    "import/no-named-as-default-member": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        // 오름차순 정렬, 대소문자 구분 하지 않음
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ],
+    // import 정렬
+    "sort-imports": [
+      "error",
+      {
+        // 대문자 무시
+        "ignoreCase": true,
+        // 변수나 함수의 순서가 import 정렬에 영향을 미치지 않음
+        "ignoreDeclarationSort": true,
+        // 멤버 정렬 무시
+        "ignoreMemberSort": false,
+        // 그룹화
+        "allowSeparatedGroups": true
+      }
+    ],
+    "consistent-return": "off"
+  }
 }
