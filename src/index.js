@@ -1,10 +1,13 @@
 /* eslint-disable */
 import '@/style.css';
+import App from '@/App.js';
 
-addEventListener('load', () => {
+const common = (App) => {
   const app = document.querySelector('#app');
 
   if (app) {
-    app.appendChild(buttonImage);
+    app.appendChild(App());
   }
-});
+};
+
+addEventListener('load', () => common(App));

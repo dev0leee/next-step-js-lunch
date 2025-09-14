@@ -8,7 +8,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "ignorePatterns": ["**/*", "!src/**/*"],
+  "files": ["src/**/*.js"],
   "extends": ["airbnb-base", "plugin:import/recommended"],
   "plugins": ["import"],
   "settings": {
@@ -30,6 +30,8 @@
     "import/no-mutable-exports": "error",
     // import : 가져온 모듈을 선택자로 사용 금지
     "import/no-named-as-default-member": "error",
+    "import/extensions": "off",
+    "object-curly-newline": "off",
     "import/order": [
       "error",
       {
