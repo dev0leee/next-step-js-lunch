@@ -1,10 +1,10 @@
 import Layout from '@components/Layout.js';
-import RestaurantsList from '@views/RestaurantsList.js';
+import RestaurantsView from '@views/RestaurantsView.js';
 
 const App = () => {
-  const RestaurantsListView = RestaurantsList();
+  const Restaurants = RestaurantsView();
 
-  return Layout(RestaurantsListView);
+  return Layout(Restaurants);
 };
 
 export default App;

@@ -1,18 +1,31 @@
-import '@views/RestaurantsList.css';
-import Select from '@components/Select.js';
+import { RESTAURANTS_LIST } from '@/mocks/restaurants.js';
+import RestaurantItem from '@views/RestaurantItem.js';
+import { isRestaurantListExist } from '@/domain/restaurantList.js';
 
 const RestaurantsList = () => {
-  const div = document.createElement('div');
-  const sectionSelect = document.createElement('section');
-  div.appendChild(sectionSelect);
+  const sectionList = document.createElement('section');
+  sectionList.classList.add('restaurant-list-container');
 
-  const selectCategory = Select({ name: 'category' });
-  const selectSort = Select({ name: 'sort' });
+  const { isExist, EMPTY_TEXT } = isRestaurantListExist(RESTAURANTS_LIST);
 
-  sectionSelect.appendChild(selectCategory);
-  sectionSelect.appendChild(selectSort);
+  if (!isExist) {
+    const emptyText = document.createElement('p');
+    emptyText.classList.add('restaurant-list-empty');
+    emptyText.textContent = EMPTY_TEXT;
 
-  return div;
+    sectionList.appendChild(emptyText);
+
+    return sectionList;
+  }
+
+  const restaurantsList = document.createElement('ul');
+  sectionList.appendChild(restaurantsList);
+
+  RESTAURANTS_LIST.forEach((item) => {
+    restaurantsList.appendChild(RestaurantItem(item));
+  });
+
+  return sectionList;
 };
 
 export default RestaurantsList;
